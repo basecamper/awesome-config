@@ -22,6 +22,8 @@ local launchbar = require('launchbar')
 local volumebar = require('volumebar')
 local textclock = require('textclock')
 
+-- launch autostart lua
+require("autostart")
 
 local separator = wibox.widget.textbox()
 separator:set_markup(" <span foreground='grey'> </span> ")

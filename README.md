@@ -2,6 +2,7 @@ place into .config/awesome/
 which is the config dir loaded by gfs.get_configuration_dir()
 
 volumebar requires pulseaudio/pactl
+media key binding requires playerctl
 
 awesome v4.3 (Too long)
  • Compiled against Lua 5.3.6 (running with Lua 5.3)

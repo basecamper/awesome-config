@@ -283,8 +283,18 @@ root.buttons(gears.table.join(
 ))
 -- }}}
 
+local playerctl_cmd = "playerctl -s "
+
+
 -- {{{ Key bindings
 globalkeys = gears.table.join(
+    awful.key({ }, "XF86AudioPrev", function () awful.util.spawn( playerctl_cmd .. "previous")  end),
+    awful.key({ }, "XF86AudioPlay", function () awful.util.spawn( playerctl_cmd .. "play-pause")  end),
+    awful.key({ }, "XF86AudioStop", function () awful.util.spawn( playerctl_cmd .. "stop")  end),
+    awful.key({ }, "XF86AudioNext", function () awful.util.spawn( playerctl_cmd .. "next")  end),
+    awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn( playerctl_cmd .. "volume 5%-")  end),
+    awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn( playerctl_cmd .. "volume 5%+")  end),
+    awful.key({ }, "XF86AudioMute", function () awful.util.spawn( playerctl_cmd .. "mute")  end),
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,

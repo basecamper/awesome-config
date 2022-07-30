@@ -1,6 +1,6 @@
 place into .config/awesome/
 which is the config dir loaded by gfs.get_configuration_dir()
-
+ 
 volumebar requires pulseaudio/pactl
 media key binding requires playerctl
 

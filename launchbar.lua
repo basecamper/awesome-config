@@ -25,8 +25,8 @@ function launchbar.new()
    widget:add( launcher({ command = "lxterminal", image = "/usr/share/icons/hicolor/128x128/apps/lxterminal.png" }) )
    widget:add( launcher({ command = "pcmanfm", image = "/usr/share/icons/Adwaita/48x48/places/folder.png" }) )
    widget:add( separator )
-   widget:add( launcher({ command = "pavucontrol", image = "/usr/share/icons/Adwaita/48x48/legacy/audio-volume-medium.png" }) )
-   widget:add( launcher({ command = "lxrandr", image = "/usr/share/icons/Adwaita/48x48/legacy/view-fullscreen.png" }) )
+   widget:add( launcher({ command = "pavucontrol", image = "/usr/share/icons/Adwaita/48x48/devices/audio-headphones.png" }) )
+   widget:add( launcher({ command = "lxrandr", image = "/usr/share/icons/nuoveXT2/48x48/actions/gtk_fullscreen.png" }) )
    --widget:add( launcher({ command = "echo $(zenity --password --display=0) | sudo -S gparted", image = "/usr/share/icons/hicolor/48x48/apps/gparted.png" }) )
    return widget
 end

@@ -257,7 +257,7 @@ awful.screen.connect_for_each_screen(function(s)
          layout = wibox.layout.align.horizontal,
          { -- Left widgets
                layout = wibox.layout.fixed.horizontal,
-               mylaunchbar,
+               -- mylaunchbar,
                separator,
                s.mytaglist,
                s.mypromptbox,
@@ -404,7 +404,13 @@ clientkeys = gears.table.join(
         {description = "toggle fullscreen", group = "client"}),
     awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
-    awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
+    awful.key({ modkey, "Control" }, "space",
+                function (c) 
+                -- awful.client.floating.toggle
+                c.floating = not c.floating
+                awful.placement.no_offscreen(c)
+                end
+                ,
               {description = "toggle floating", group = "client"}),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
               {description = "move to master", group = "client"}),
